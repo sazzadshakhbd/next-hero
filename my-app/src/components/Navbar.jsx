@@ -5,7 +5,7 @@ import React from "react";
 export default function Navbar() {
     const links = [
         {title: "About", path: "/about"},
-        {title: "Blog", path: "/blog"},
+        {title: "Blogs", path: "/blogs"},
         {title: "Contacts", path: "/contacts"},
         {title: "Portfolio", path: "/portfolio"},
         {title: "Services", path: "/services"},
