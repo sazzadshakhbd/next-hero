@@ -9,6 +9,8 @@ export default function Navbar() {
         {title: "Contacts", path: "/contacts"},
         {title: "Portfolio", path: "/portfolio"},
         {title: "Services", path: "/services"},
+        {title: "Categories", path: "/categories"},
+        {title: "Special Blogs", path: "/blogs/specialblogs"},
     ]
     const pathName = usePathname();
     const router = useRouter();
