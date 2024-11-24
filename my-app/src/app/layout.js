@@ -23,16 +23,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <h6>Logo</h6>
-        <ul>
-          <li>About</li>
-          <li>Service</li>
-          <li>Contact</li>
-        </ul>
-        {children}
-        <footer>
-          This is my footer
-        </footer>
+        <nav className="bg-teal-800 p-4 text-white">
+          <h6>Logo</h6>
+          <ul>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+        <div className="h-screen">{children}</div>
+        <footer>This is my footer</footer>
       </body>
     </html>
   );
