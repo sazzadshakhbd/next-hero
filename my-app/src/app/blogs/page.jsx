@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 export default function BlogPage() {
@@ -36,7 +37,9 @@ export default function BlogPage() {
         <div key={blogs.slug} className='bg-green-400 border-2 border-white p-5'>
           <h2>{blog.title}</h2>
           <p>{blog.description}</p>
-          <button>View Details</button>
+          <button className='bg-slate-300 px-3 py-1 mt-3'>
+            <Link href={`/blogs/${blog.slug}`}>View Details</Link>
+          </button>
         </div>
       )}
     </div>
