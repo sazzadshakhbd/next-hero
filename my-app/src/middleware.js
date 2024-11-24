@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server'
  
-const user = false;
+const user = true;
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {
     
-    if (!user) {
+
+    const cookies = request.cookies.get('token')
+    if (!cookies) {
         return NextResponse.redirect(new URL('/login', request.url))
     }
     return NextResponse.next();
