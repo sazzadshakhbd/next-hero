@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React from "react";
+import React, { Children } from "react";
 export default function Navbar() {
     const links = [
         {title: "About", path: "/about"},
@@ -16,6 +16,10 @@ export default function Navbar() {
     const handler = () => {
         router.push('/login')
     }
+    if(pathName.includes('dashboard'))
+        return(
+        <div className="bg-red-400">Dashboard Layout</div>
+    )
   return (
     <nav className="bg-teal-800 py-4 px-6 flex justify-between items-center text-white">
       <h6 className="text-3xl">Next <span className="text-cyan-300">Hero</span></h6>
