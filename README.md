@@ -1,2 +1,2 @@
 # next-hero
-next js 14 application for beginner
+next js 15.0.3 application for beginner
