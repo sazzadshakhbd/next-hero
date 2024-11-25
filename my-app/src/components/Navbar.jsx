@@ -11,6 +11,7 @@ export default function Navbar() {
         {title: "Services", path: "/services"},
         {title: "Categories", path: "/categories"},
         {title: "Special Blogs", path: "/blogs/specialblogs"},
+        {title: "Post", path: "/post"},
     ]
     const pathName = usePathname();
     const router = useRouter();
