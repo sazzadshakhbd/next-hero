@@ -10,7 +10,18 @@ const page =  async () => {
   const postData = await getPosts();
   console.log(postData)
   return (
-    <div>page</div>
+    <div>
+      <h1 className='text-center text-teal-500 font-bold '>All Posts</h1>
+      <div className='grid grid-cols-4 p-6'>
+        {
+          postData.map(({id, title, body})=> 
+          <div className='border-2 p-5 m-3'>
+            <h3 className='text-red-400'>{id} Title: {title}</h3>
+            <p>{body}</p>
+          </div>
+          )}
+      </div>
+    </div>
   )
 }
 
