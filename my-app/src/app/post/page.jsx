@@ -1,7 +1,18 @@
 import React from 'react'
 
-export default function PostPage() {
+const getPosts = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json();
+  return data
+}
+
+const page =  async () => {
+  const postData = await getPosts();
+  console.log(postData)
   return (
-    <div className='h-screen'>PostPage</div>
+    <div>page</div>
   )
 }
+
+
+export default page;
